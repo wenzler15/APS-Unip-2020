@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor = "let g of grupos">
+        <a (click) = "grupoClicado.emit(g)">{{g.descricao}}</a>
+    </li>
+</ul>

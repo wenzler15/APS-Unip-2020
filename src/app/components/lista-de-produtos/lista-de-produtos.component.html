@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Lista</title>
+    <link href="lista-de-produtos.component.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <img id="petmania" src="../imgs/twitter_header_photo_1.png" />
+        <nav>
+          <ul>
+            <li><a href="../home/home.component.html">Home</a></li>
+            <li>
+              <a href="../novo-produto/novo-produto.component.html">
+                Novo produto
+              </a>
+            </li>
+            <li>
+              <a href="../lista-de-produtos/lista-de-produtos.component.html"
+                >Lista de produtos</a
+              >
+            </li>
+            <li><a href="../contatos/contatos.component.html">Contatos</a></li>
+            <li><a href="../sobre/sobre.component.html">Sobre</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div>
+        <app-produto
+          *ngFor="let p of produtosExibidos"
+          [produto]="p"
+        ></app-produto>
+      </div>
+    </div>
+  </body>
+</html>
