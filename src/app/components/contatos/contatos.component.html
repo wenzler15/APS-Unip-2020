@@ -4,6 +4,9 @@
     <link href="contatos.component.css" rel="stylesheet" />
   </head>
   <body>
+
+    
+
     <div id="container">
       <header>
         <img id="petmania" src="../imgs/twitter_header_photo_1.png" />
@@ -25,23 +28,110 @@
           </ul>
         </nav>
       </header>
-      <div id="img">
-        <img id="pet" src="../imgs/petshops.jpg" />
+
+      
+      
+      <div class="container">
+      <h2 class="h1 m-0">Contate-nos</h2>
+      <p class="pb-4">Deixe uma mensagem para nós, fale sobre sua experiência com o nosso serviço :)</p>
+      <div class="row">
+          <div class="col-lg-5 mb-4">
+              <div class="card border-dark rounded-0">
+                  <div class="card-header p-0">
+                      <div id="colorCard" class="bg-dark text-white text-center py-2">
+                          <h3><i class="fa fa-envelope"></i>Escreva para nós:</h3>
+                          <i class="m-0">Deixe sua sugestão</i>
+                      </div>
+                  </div>
+                <form [formGroup]="formLogin"> 
+                      <div class="card-body p-3">
+                          <div class="form-group">
+                              <label>Seu nome</label>
+                              <div class="input-group">
+                                  <div class="input-group-addon bg-light"><i class="fa fa-user text-primary"></i>
+                                  </div>
+  
+                                  <input type="text" class="form-control" id="nome" name="nome" formControlName="nome"
+                                      placeholder="Nome do usuário">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label>Seu e-mail</label>
+                              <div class="input-group mb-2 mb-sm-0">
+                                  <div class="input-group-addon bg-light"><i class="fa fa-envelope text-primary"></i>
+                                  </div>
+                                  <input type="text" class="form-control" id="email" name="email" formControlName="email"
+                                      placeholder="Seu e-mail">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label>Mensagem</label>
+                              <div class="input-group mb-2 mb-sm-0">
+                                  <div class="input-group-addon bg-light"><i class="fa fa-pencil text-primary"></i>
+                                  </div>
+                                  <textarea class="form-control"></textarea>
+                              </div>
+                          </div>
+                          <div class="text-center">
+                              <button id="botao" type="button" [disabled]="!formLogin.valid"
+                                  class="btn btn-dark btn-block rounded-0 py-2" data-toggle="modal"
+                                  data-target="#exampleModal">Enviar Mensagem</button>
+                              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                  aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog" role="document">
+                                      <div class="modal-content">
+                                          <div class="modal-header">
+                                              <h5 class="modal-title" id="exampleModalLabel">Mensagem para Você!</h5>
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                  <span aria-hidden="true">&times;</span>
+                                              </button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <img src="../../../assets/icon/tick.svg" width="30px">
+                                              Mensagem enviada com sucesso!
+                                          </div>
+                                          <div class="modal-footer">
+                                              <button id="btnClase" type="button" class="btn btn-secondary"
+                                                  data-dismiss="modal" routerLink="/pageHome">Fechar</button>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+
+          <div class="col-lg-7">
+              <div class="mb-4">
+              </div>
+              <div class="row text-center">
+                  <div class="col-md-4">
+                      <a class="bg-dark px-3 py-2 rounded text-white mb-2 d-inline-block"><i
+                              class="fa fa-map-marker"></i><img src="../../../assets/imgFooter/place.svg"
+                              alt="localization" width="32px"></a>
+                              <p>Rua dos Palmares</p>
+                              <p>Número 67</p>
+                              <p>São Paulo - SP</p>
+                  </div>
+                  <div class="col-md-4">
+                      <a class="bg-dark px-3 py-2 rounded text-white mb-2 d-inline-block"><i class="fa fa-phone"></i><img
+                              src="../../../assets/imgFooter/phone.svg " alt="phone" width="32px"></a>
+                              <p>Whatsapp: (11) 98675-2398</p>
+                              <p>Telefone: (11) 4677-3028</p>
+                              <p> <br> Seg - Sex, 8:00-22:00</p>
+                  </div>
+                  <div class="col-md-4">
+                      <a class="bg-dark px-3 py-2 rounded text-white mb-2 d-inline-block"><i
+                              class="fa fa-envelope"></i><img src="../../../assets/imgFooter/mail.svg" alt="email"
+                              width="32px"></a>
+                      <p>petmania@outlook.com</p>
+                  </div>
+              </div>
+          </div>
       </div>
-      <div id="items">
-        <div id="contatos">
-          <h1>Contate-nos</h1>
-          <p>E-mail: petmania@outlook.com</p>
-          <p>Whatsapp: (11) 98675-2398</p>
-          <p>Telefone: (11) 4677-3028</p>
-        </div>
-        <div id="enderecos">
-          <h1>Venha até nosso petshop</h1>
-          <p>Rua dos Palmares</p>
-          <p>Número 67</p>
-          <p>São Paulo - SP</p>
-        </div>
-      </div>
+  </div>
     </div>
   </body>
 </html>
