@@ -8,11 +8,9 @@ import { Produtos } from "src/app/models/Produtos";
   styleUrls: ["./novo-produto.component.css"]
 })
 export class NovoProdutoComponent implements OnInit {
-  public title: String = "teste";
+  public lista: any[] = [];
 
   formProduto: FormGroup;
-
-  constructor() {}
 
   createForm(produto: Produtos) {
     this.formProduto = new FormGroup({
@@ -20,6 +18,9 @@ export class NovoProdutoComponent implements OnInit {
       desc: new FormControl(produto.descricao),
       regAnvisa: new FormControl(produto.regAnvisa)
     });
+  }
+  constructor() {
+    this.lista.push(new Produtos());
   }
 
   ngOnInit(): void {
