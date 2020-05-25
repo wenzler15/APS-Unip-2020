@@ -12,6 +12,11 @@ header {
   border-radius: 10px;
 }
 
+#items {
+  margin-top: 60px;
+  text-align: center;
+}
+
 #petshop {
   padding: 5px 0px 15px 0px;
   text-align: center;
@@ -45,4 +50,14 @@ a {
   color: #63525c;
   font: inherit;
   text-decoration: none;
+}
+
+#imagens {
+  display: flex;
+  justify-content: space-between;
+}
+
+.show {
+  width: 500px;
+  height: 300px;
 }

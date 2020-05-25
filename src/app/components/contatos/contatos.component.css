@@ -5,6 +5,17 @@ header {
   border-radius: 10px 10px 0 0;
 }
 
+#final {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 10%;
+}
+
+.ending {
+  width: 33%;
+}
+
 #items {
   display: flex;
   width: 70%;
@@ -66,4 +77,34 @@ a {
   color: #63525c;
   font: inherit;
   text-decoration: none;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+input {
+  margin-top: 10px;
+  width: 200px;
+  height: 40px;
+  border: 0 none;
+  border-bottom-width: thin;
+  border-style: solid;
+  border-color: gray;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+textarea {
+  width: 200px;
+  height: 150px;
+}
+
+form {
+  margin-left: 50px;
+  margin-top: 20px;
 }
