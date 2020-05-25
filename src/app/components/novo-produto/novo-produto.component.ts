@@ -1,36 +1,32 @@
-import { Component, OnInit } from '@angular/core';
-import {FormGroup, FormControl} from "@angular/forms";
-import { Produtos } from 'src/app/models/Produtos';
+import { Component, OnInit } from "@angular/core";
+import { FormGroup, FormControl } from "@angular/forms";
+import { Produtos } from "src/app/models/Produtos";
 
 @Component({
-  selector: 'app-novo-produto',
-  templateUrl: './novo-produto.component.html',
-  styleUrls: ['./novo-produto.component.css']
+  selector: "app-novo-produto",
+  templateUrl: "./novo-produto.component.html",
+  styleUrls: ["./novo-produto.component.css"]
 })
 export class NovoProdutoComponent implements OnInit {
+  public title: String = "teste";
 
-  formProduto:FormGroup;
+  formProduto: FormGroup;
 
-  constructor() { }
+  constructor() {}
 
-createForm(produto: Produtos){
-
-  this.formProduto = new FormGroup({
-  cod: new FormControl(produto.cod),
-  desc: new FormControl(produto.descricao),
-  regAnvisa: new FormControl(produto.regAnvisa),
-  controlado: new FormControl(produto.controlado), 
-  codGrupo: new FormControl(produto.codGrupo)
-
-});
-}
+  createForm(produto: Produtos) {
+    this.formProduto = new FormGroup({
+      cod: new FormControl(produto.cod),
+      desc: new FormControl(produto.descricao),
+      regAnvisa: new FormControl(produto.regAnvisa)
+    });
+  }
 
   ngOnInit(): void {
-    this.createForm(new Produtos())
+    this.createForm(new Produtos());
   }
 
-  enviarProduto(){
+  enviarProduto() {
     console.log(this.formProduto);
   }
-
 }
