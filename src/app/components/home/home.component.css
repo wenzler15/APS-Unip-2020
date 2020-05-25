@@ -58,6 +58,11 @@ a {
 }
 
 .show {
+  width: 400px;
+  height: 300px;
+}
+
+#mainimg {
   width: 500px;
   height: 300px;
 }
